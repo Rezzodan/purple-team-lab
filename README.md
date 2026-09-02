@@ -40,7 +40,7 @@ My approach:
 
 - **Telegram:** [@rezzodan](https://t.me/rezzodan)
 - **GitHub:** [Rezzodan](https://github.com/Rezzodan)
-- **Email:** [your-email@example.com]
+- **Email:** malooyy6@gmail.com
 
 ---
 
