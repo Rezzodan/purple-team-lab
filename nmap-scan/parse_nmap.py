@@ -40,6 +40,7 @@ def parse_nmap_xml(xml_file):
             continue
 
         open_ports = 0
+        risky_services = 0
         for port in ports.findall('port'):
             state = port.find('state')
             if state is not None and state.get('state') == 'open':
@@ -49,6 +50,8 @@ def parse_nmap_xml(xml_file):
                 service = port.find('service')
 
                 service_name = service.get('name') if service is not None else "unknown"
+                if service_name in ['ftp', 'ssh','telnet','http']:
+                    risky_services += 1
                 product = service.get('product') if service is not None else ""
                 version = service.get('version') if service is not None else ""
                 extra = service.get('extrainfo') if service is not None else ""
@@ -62,6 +65,7 @@ def parse_nmap_xml(xml_file):
                     print(f"     📦 {version_str}")
 
         print(f"\n  ✅ Total open ports: {open_ports}")
+        print(f"  ⚠️  Potentially risky services: {risky_services}")
 
     print("\n" + "="*50)
 
