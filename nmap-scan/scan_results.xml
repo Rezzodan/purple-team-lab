@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.99 scan initiated Thu Sep  3 14:28:57 2026 as: /usr/lib/nmap/nmap -&#45;privileged -sV -p- -oX scan_results.xml 127.0.0.1 -->
+<nmaprun scanner="nmap" args="/usr/lib/nmap/nmap -&#45;privileged -sV -p- -oX scan_results.xml 127.0.0.1" start="1788427737" startstr="Thu Sep  3 14:28:57 2026" version="7.99" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1788427737" endtime="1788427739"><status state="up" reason="localhost-response" reason_ttl="0"/>
+<address addr="127.0.0.1" addrtype="ipv4"/>
+<hostnames>
+<hostname name="localhost" type="PTR"/>
+</hostnames>
+<ports><extraports state="closed" count="65533">
+<extrareasons reason="reset" count="65533" proto="tcp" ports="1-2120,2122-2222,2224-65535"/>
+</extraports>
+<port protocol="tcp" portid="2121"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="ftp" product="vsftpd" version="2.3.4" ostype="Unix" method="probed" conf="10"><cpe>cpe:/a:vsftpd:vsftpd:2.3.4</cpe></service></port>
+<port protocol="tcp" portid="2223"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="ssh" product="OpenSSH" version="4.7p1 Debian 8ubuntu1" extrainfo="protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:4.7p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service></port>
+</ports>
+<times srtt="14" rttvar="0" to="100000"/>
+</host>
+<runstats><finished time="1788427739" timestr="Thu Sep  3 14:28:59 2026" summary="Nmap done at Thu Sep  3 14:28:59 2026; 1 IP address (1 host up) scanned in 2.21 seconds" elapsed="2.21" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>
